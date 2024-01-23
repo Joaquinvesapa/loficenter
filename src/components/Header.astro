@@ -1,17 +1,17 @@
 ---
+import Categories from "./Categories.astro";
 import Logo from "./Logo.astro";
+import Sidebar from "./Sidebar.astro";
 
 
 
 ---
-<header class="bg-violet w-full fixed z-10 h-24 xl:grid xl:grid-cols-10">
+<header class="bg-violet flex flex-col fixed z-10 h-dvh w-full xl:w-auto">
 
-  <section id="header" class=" h-full lg:col-span-2 flex px-9 justify-between xl:justify-center items-center border-b-6 xl:border-r-6 border-black">
+  <section id="header" class=" h-24 flex  px-9 justify-between xl:justify-center items-center border-b-6 md:border-r-6 border-black bg-violet">
     <Logo/>
-    <a class="xl:hidden" href="#categories-nav"><img class="size-10" src="/menu-2.svg"></a>
+    <a class="xl:hidden absolute right-0 pr-9" href="#categories-nav"><img class="size-10" src="/menu-2.svg"></a>
+    <a class="xl:hidden" href="#header"><img class="size-10" src="/x.svg"></a>
   </section>
-
-  <section class="hidden xl:col-span-8 xl:flex items-center px-7 border-b-6 border-black">
-    <h2 class="text-xl xl:text-2xl font-medium text-white">Select a category...</h2>
-  </section>
+  <Categories/>
 </header>

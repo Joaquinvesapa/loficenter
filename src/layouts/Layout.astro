@@ -2,6 +2,7 @@
 import '@fontsource-variable/roboto-mono';
 import Sidebar from '../components/Sidebar.astro';
 import Header from '../components/Header.astro';
+import HeaderInfo from '../components/HeaderInfo.astro';
 interface Props {
 	title: string;
 }
@@ -21,10 +22,8 @@ const { title } = Astro.props;
 	</head>
 	<body class="bg-dark-violet">
 		<Header/>
-		<main class="w-full grid grid-cols-10 lg:h-screen">
-			<Sidebar />
-			<slot class="col-span-8"/>
-		</main>
+		<HeaderInfo/>
+		<slot/>
 	</body>
 </html>
 <style is:global>
