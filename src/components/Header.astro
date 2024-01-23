@@ -2,12 +2,13 @@
 import Logo from "./Logo.astro";
 
 
+
 ---
 <header class="bg-violet w-full fixed z-10 h-24 xl:grid xl:grid-cols-10">
 
-  <section class=" h-full lg:col-span-2 flex px-9 xl:justify-center items-center border-b-6 xl:border-r-6 border-black">
+  <section id="header" class=" h-full lg:col-span-2 flex px-9 justify-between xl:justify-center items-center border-b-6 xl:border-r-6 border-black">
     <Logo/>
-
+    <a class="xl:hidden" href="#categories-nav"><img class="size-10" src="/menu-2.svg"></a>
   </section>
 
   <section class="hidden xl:col-span-8 xl:flex items-center px-7 border-b-6 border-black">
