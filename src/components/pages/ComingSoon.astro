@@ -1,0 +1,48 @@
+---
+import "@fontsource-variable/roboto-mono";
+import Coffee from "../icons/Coffee.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="LofiCenter comming soon..." />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/Coffee.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>LofiCenter</title>
+  </head>
+  <body class="bg-dark-violet">
+    <main
+      class="flex flex-col gap-4 justify-center items-center w-full h-screen"
+    >
+      <h1 class="text-4xl text-light-violet font-bold">LofiCenter</h1>
+      <div class="flex items-center">
+        <h2 class="text-3xl text-light-blue font-bold">Coming soon...</h2>
+        <Coffee class="size-14 text-light-blue" />
+      </div>
+    </main>
+    <style is:global>
+      body {
+        font-family: "Roboto Mono Variable", sans-serif;
+        min-height: 100vh;
+      }
+      code {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
+      main {
+        display: grid;
+        grid-column: span 8;
+      }
+    </style>
+  </body>
+</html>
