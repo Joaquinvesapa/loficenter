@@ -1,0 +1,19 @@
+---
+import NavLink from "@/components/NavLink.astro";
+---
+
+<div
+  id="categories-nav"
+  class="fixed w-full xl:static z-10 bg-violet p-6 -translate-y-[110%] transition-transform duration-200 target:translate-y-0 xl:translate-y-[initial]"
+>
+  <div class="flex w-full items-center justify-between">
+    <h2 class="font-medium text-white text-2xl">Categories</h2>
+  </div>
+  <canvas class="relative w-full h-1 bg-pink top-4"></canvas>
+  <nav class="relative top-10 flex flex-col gap-5">
+    <NavLink href="disney">Disney</NavLink>
+    <NavLink href="disney">Disney</NavLink>
+    <NavLink href="disney">Disney</NavLink>
+    <NavLink href="disney">Disney</NavLink>
+  </nav>
+</div>

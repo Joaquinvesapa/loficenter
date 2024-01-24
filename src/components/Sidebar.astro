@@ -1,0 +1,37 @@
+---
+import Categories from "@/components/Categories.astro";
+import Logo from "@/components/Logo.astro";
+---
+
+<aside
+  class={`${Astro.props.class} h-screen bg-violet xl:border-r-6 border-r-black`}
+>
+  <div
+    class="relative z-20 bg-violet border-b-6 border-b-black h-20 flex justify-between items-center px-6"
+  >
+    <Logo />
+    <a class="menu-btn xl:hidden" href="#categories-nav">
+      <img class="size-8" src="/menu-2.svg" />
+    </a>
+    <a class="close-btn hidden relative xl:hidden" href="#header">
+      <img class="size-8" src="/x.svg" />
+    </a>
+  </div>
+  <Categories />
+
+  <script>
+    const closebtn = document.querySelector(".close-btn");
+    const menubtn = document.querySelector(".menu-btn");
+
+    closebtn?.addEventListener("click", () => {
+      closebtn?.classList.toggle("hidden");
+      menubtn?.classList.toggle("hidden");
+    });
+
+    menubtn?.addEventListener("click", (e) => {
+      console.log(e);
+      menubtn?.classList.toggle("hidden");
+      closebtn?.classList.toggle("hidden");
+    });
+  </script>
+</aside>

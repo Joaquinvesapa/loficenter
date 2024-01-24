@@ -1,30 +1,27 @@
 ---
 import "@fontsource-variable/roboto-mono";
-import { ViewTransitions } from "astro:transitions";
-import Sidebar from "@/components/Sidebar.astro";
-interface Props {
-  title: string;
-  description: string;
-}
-
-const { title, description } = Astro.props;
+import Coffee from "../icons/Coffee.astro";
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="description" content={description} />
+    <meta name="description" content="LofiCenter comming soon..." />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/Coffee.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
-    <ViewTransitions />
+    <title>LofiCenter</title>
   </head>
-  <body class="bg-dark-violet grid grid-cols-1 xl:grid-cols-10">
-    <Sidebar class="xl:col-span-2" />
-    <main class="z-0 xl:col-span-10">
-      <slot />
+  <body class="bg-dark-violet">
+    <main
+      class="flex flex-col gap-4 justify-center items-center w-full h-screen"
+    >
+      <h1 class="text-4xl text-light-violet font-bold">LofiCenter</h1>
+      <div class="flex items-center">
+        <h2 class="text-3xl text-light-blue font-bold">Coming soon...</h2>
+        <Coffee class="size-14 text-light-blue" />
+      </div>
     </main>
     <style is:global>
       body {

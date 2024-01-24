@@ -1,0 +1,22 @@
+---
+interface Props {
+  checkActive?: boolean;
+  href: string;
+  class?: string;
+}
+
+const {
+  href,
+  class: className,
+  checkActive = true,
+  ...restOfProps
+} = Astro.props;
+---
+
+<a href={href} class={`group pb-2 text-xl text-white font-normal`}>
+  <slot />
+  <canvas
+    class="absolute w-0 transition-all duration-200 group-hover:w-full h-1 bg-white"
+  >
+  </canvas></a
+>
