@@ -1,7 +1,7 @@
 ---
 import "@fontsource-variable/roboto-mono";
-import Sidebar from "../components/Sidebar.astro";
 import { ViewTransitions } from "astro:transitions";
+import Sidebar from "@/components/Sidebar.astro";
 interface Props {
   title: string;
   description: string;
@@ -23,30 +23,29 @@ const { title, description } = Astro.props;
   </head>
   <body class="bg-dark-violet grid grid-cols-1 xl:grid-cols-10">
     <Sidebar class="xl:col-span-2" />
-    <!-- <Header/>
-		<HeaderInfo/> -->
     <main class="z-0 xl:col-span-10">
       <slot />
     </main>
-  </body><style is:global>
-    body {
-      font-family: "Roboto Mono Variable", sans-serif;
-      min-height: 100vh;
-    }
-    code {
-      font-family:
-        Menlo,
-        Monaco,
-        Lucida Console,
-        Liberation Mono,
-        DejaVu Sans Mono,
-        Bitstream Vera Sans Mono,
-        Courier New,
-        monospace;
-    }
-    main {
-      display: grid;
-      grid-column: span 8;
-    }
-  </style>
+    <style is:global>
+      body {
+        font-family: "Roboto Mono Variable", sans-serif;
+        min-height: 100vh;
+      }
+      code {
+        font-family:
+          Menlo,
+          Monaco,
+          Lucida Console,
+          Liberation Mono,
+          DejaVu Sans Mono,
+          Bitstream Vera Sans Mono,
+          Courier New,
+          monospace;
+      }
+      main {
+        display: grid;
+        grid-column: span 8;
+      }
+    </style>
+  </body>
 </html>
