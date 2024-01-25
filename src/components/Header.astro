@@ -1,5 +1,19 @@
+---
+interface Props {
+  category?: string;
+  currentVideoTitle?: string;
+}
+
+const { category, currentVideoTitle } = Astro.props;
+---
+
 <header
-  class="h-20 hidden w-full p-6 xl:flex items-center justify-between bg-violet border-b-6 border-b-black"
+  class="h-20 hidden w-full p-6 xl:grid grid-cols-2 content-center items-center justify-between bg-violet border-b-6 border-b-black"
 >
-  <span class="text-2xl text-white">Select a category...</span>
+  <span class="text-2xl text-white"
+    >{category ? category : "Select a category..."}</span
+  >
+  <span class="text-2xl text-white truncate"
+    >{currentVideoTitle && currentVideoTitle}</span
+  >
 </header>
