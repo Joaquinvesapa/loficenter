@@ -1,17 +1,28 @@
 ---
 import NavLink from "@/components/NavLink.astro";
+import Logo from "./Logo.astro";
 ---
 
 <div
   id="categories-nav"
-  class="fixed w-full xl:static z-10 h-full xl:h-auto mt-20 xl:mt-0 bg-violet p-6 -translate-y-[110%] transition-transform duration-200 target:translate-y-0 xl:translate-y-[initial]"
+  class="fixed w-full xl:static z-30 h-full xl:h-auto xl:mt-6 bg-violet px-6 -translate-y-[110%] transition-transform duration-200 target:translate-y-0 xl:translate-y-[initial]"
 >
+  <div
+    class="relative xl:hidden z-20 mb-6 xl:bg-violet border-b-6 border-b-black h-20 flex justify-between items-center"
+  >
+    <Logo />
+    <button class="close-btn xl:hidden">
+      <a href="#header">
+        <img class="size-8" src="/x.svg" />
+      </a>
+    </button>
+  </div>
   <div class="flex w-full items-center justify-between">
     <h2 class="font-medium text-white text-2xl">Categories</h2>
   </div>
-  <canvas class="relative w-full h-1 bg-pink top-6"></canvas>
+  <canvas class="relative w-full h-1 bg-pink top-4"></canvas>
   <nav class="relative top-10 flex flex-col gap-5">
-    <NavLink href="/disney">Disney</NavLink>
-    <NavLink href="/lordoftherings">Lord Of The Rings</NavLink>
+    <NavLink href="/disney/">Disney</NavLink>
+    <NavLink href="/lordoftherings/">Lord Of The Rings</NavLink>
   </nav>
 </div>

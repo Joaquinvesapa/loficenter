@@ -1,36 +1,25 @@
 ---
 import Categories from "@/components/Categories.astro";
 import Logo from "@/components/Logo.astro";
+import Coffee from "./icons/Coffee.astro";
 ---
 
 <aside
-  class={`${Astro.props.class} flex flex-col bg-violet xl:border-r-6 border-r-black`}
+  class={`${Astro.props.class} flex flex-col xl:bg-violet xl:border-r-6 border-r-black`}
 >
   <div
-    class="relative z-20 bg-violet border-b-6 border-b-black h-20 flex justify-between items-center px-6"
+    id="header-nav"
+    class="fixed xl:relative w-full z-20 xl:bg-violet xl:border-b-6 border-b-black h-20 flex justify-between items-center px-6"
   >
-    <Logo />
-    <a class="menu-btn xl:hidden" href="#categories-nav">
-      <img class="size-8" src="/menu-2.svg" />
+    <Logo class="hidden xl:flex" />
+    <a class="xl:hidden" href="/">
+      <Coffee class="size-10 text-light-violet" />
     </a>
-    <a class="close-btn hidden relative xl:hidden" href="#header">
-      <img class="size-8" src="/x.svg" />
-    </a>
+    <button class="menu-btn xl:hidden">
+      <a href="#categories-nav">
+        <img class="size-8" src="/menu-2.svg" />
+      </a>
+    </button>
   </div>
   <Categories />
 </aside>
-<script>
-  const closebtn = document.querySelector(".close-btn");
-  const menubtn = document.querySelector(".menu-btn");
-
-  closebtn?.addEventListener("click", () => {
-    closebtn?.classList.toggle("hidden");
-    menubtn?.classList.toggle("hidden");
-  });
-
-  menubtn?.addEventListener("click", (e) => {
-    console.log(e);
-    menubtn?.classList.toggle("hidden");
-    closebtn?.classList.toggle("hidden");
-  });
-</script>
